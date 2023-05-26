@@ -15,6 +15,16 @@ class scene extends Phaser.Scene {
 
         this.cx = this.cameras.main.centerX;
         this.cy = this.cameras.main.centerY;
+        
+        this.tips = this.add.text(this.cx,this.cy,"Use WASD to move.").setOrigin(0.5).setFontSize(80);
+        this.time.delayedCall(5000,()=>{
+            this.tweens.add({
+                targets:this.tips,
+                alpha:0,
+                repeat:false;
+                duration:1000,
+            });
+        });
 
         this.slug = this.physics.add.sprite(400, this.h, "slug")
             .setBodySize(10, 10)
