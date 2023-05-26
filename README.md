@@ -2,6 +2,8 @@
 
 Choose Complete Core gameplay
 
+Play Link:https://kaneovo.github.io/S7-Rapid-Prototyping/
+
 Use the a and d keys to control forward and backward movement.
 
 Use the w key to control jumping.
