@@ -19,11 +19,13 @@ class scene extends Phaser.Scene {
         this.slug = this.physics.add.sprite(400, this.h, "slug")
             .setBodySize(10, 10)
             .setScale(4, 2)
+            .setBounce(0)
             .setCollideWorldBounds(true, true, false, true);
 
         this.enemy = this.physics.add.sprite(this.w + 10, this.h, "enemy")
             .setBodySize(10, 10)
             .setScale(4, 2)
+            .setBounce(0)
             .setCollideWorldBounds(true, true, false, true);
 
         this.physics.add.collider(this.slug, this.enemy, this.collison, null, this);
@@ -67,6 +69,7 @@ class scene extends Phaser.Scene {
             ease: "Back.Out",
             repeat: false,
         });
+        this.slug.setVelocityX(0);
     }
 
     update() {
